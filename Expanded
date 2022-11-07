@@ -1,0 +1,40 @@
+// EXPANDED HELPS TO COVER THE REST OF THE PAGE
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const homepage());
+}
+
+class homepage extends StatelessWidget {
+  const homepage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: Column(
+          children: [
+            Expanded(
+              // use to divide the widget into parts
+              flex: 2,
+              child: Container(
+                // purple
+                height: 200,
+                color: Colors.deepPurple,
+              ),
+            ),
+            // yellow
+            Expanded(
+              child: Container(
+                height: 200,
+                color: Colors.yellowAccent,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
